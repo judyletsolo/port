@@ -1,0 +1,263 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #080808 url("img4.webp") center/cover no-repeat;
+  color: black;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+
+nav {
+  background-color: #676767;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+  color: #676767;
+}
+
+nav a.active {
+  background-color: #ffffff;
+  color: #676767;
+}
+.header-text {
+  margin: 20% 0;
+  font-size: 30px;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-text h1 span {
+  color: #fefefe;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+h1 {
+  font-size: 48px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  animation: slideDown 1.2s ease-out;
+}
+
+h2 {
+  color: #4f4340;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #0e131c;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #988e87;
+}
+
+.projects, .quiz-gallery, .test-grid {
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.projects img,
+.quiz-gallery img,
+.test-grid img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.quiz-block {
+  background-color: rgba(235, 210, 210, 0.85);
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 100px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.quiz-block:hover {
+  transform: scale(1.03);
+}
+
+main.contact {
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px 30px;
+  background-color: #676767;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer .socials a {
+  font-size: 1.5rem;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.footer .socials a:hover {
+  color: #ff69b4;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #007BFF;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  .header-text {
+    margin: 30% 0;
+    font-size: 20px;
+  }
+  .header-text h1 {
+    font-size: 40px;
+  }
+  .projects, .quiz-gallery, .test-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-item {
+    width: 90%;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 992px) {
+  .project-item {
+    width: 45%;
+  }
+}
+
+/* Laptops */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .project-item {
+    width: 30%;
+  }
+}
+
+/* Desktops / Large Screens */
+@media (min-width: 1201px) {
+  .project-item {
+    width: 20%;
+  }
+}
+
